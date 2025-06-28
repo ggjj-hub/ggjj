@@ -1,0 +1,5 @@
+D:\.net\FoodProcurementSystem\FoodProcurementSystem\bin\FoodProcurementSystem.dll
+D:\.net\FoodProcurementSystem\FoodProcurementSystem\bin\FoodProcurementSystem.pdb
+D:\.net\FoodProcurementSystem\FoodProcurementSystem\obj\Debug\FoodProcurementSystem.dll
+D:\.net\FoodProcurementSystem\FoodProcurementSystem\obj\Debug\FoodProcurementSystem.pdb
+D:\.net\FoodProcurementSystem\FoodProcurementSystem\obj\Debug\FoodProcurementSystem.csprojResolveAssemblyReference.cache

@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="FoodProcurementSystem.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" runat="server" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+      <asp:ScriptManager runat="server" EnablePageMethods="true"></asp:ScriptManager>
+    <div class="navbar">
+    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" Text="首页" />
+    |
+    <asp:Repeater ID="rptCategories" runat="server">
+        <ItemTemplate>
+            <asp:HyperLink ID="HyperLink2" runat="server" 
+                NavigateUrl='<%# "~/Categories.aspx?id=" + Eval("Id") %>'
+                Text='<%# Eval("Name") %>' />
+            |
+        </ItemTemplate>
+    </asp:Repeater>
+    <asp:HyperLink ID="HyperLink3" runat="server" 
+        NavigateUrl="~/ShoppingCart.aspx" Text="购物清单" /> |
+    <asp:HyperLink ID="HyperLink4" runat="server" 
+        NavigateUrl="~/Admin/Login.aspx" Text="后台管理" />
+</div>
+
+<div class="content">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+</div>
+
+<div class="footer">
+    <p>© 食材采购系统 - ggjj</p>
+</div>
+    </form>
+</body>
+</html>
